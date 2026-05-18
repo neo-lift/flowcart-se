@@ -1,0 +1,1400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FlowCart — AI Shopping Assistant for WooCommerce</title>
+    <meta
+      name="description"
+      content="Turn your WooCommerce store into a conversational shopping experience. FlowCart gives shoppers instant answers, personalized product recommendations, and guided buying help — trained on your catalog, pages, and policies."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%233F4FE5' d='M12 2l2.39 5.46L20 8.27l-4 4.07.94 5.66L12 15.27 7.06 18l.94-5.66L4 8.27l5.61-.81L12 2z'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <!-- =========================== TOP ANNOUNCEMENT BAR =========================== -->
+    <div class="topbar">
+      <div class="topbar__inner">
+        <span class="topbar__emoji" aria-hidden="true">🔥</span>
+        <span>New: FlowCart now lives natively inside WooCommerce — install in minutes.</span>
+        <a href="#features" class="topbar__link">See what's new <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <!-- =========================== NAVIGATION =========================== -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#" class="brand" aria-label="FlowCart home">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22">
+              <path
+                fill="#3F4FE5"
+                d="M12 0 14.3 7.6 22 8.2l-6 5 2 8.8L12 17.6 6 22l2-8.8-6-5 7.7-.6Z"
+              />
+            </svg>
+          </span>
+          <span class="brand__name">FlowCart<span class="brand__dot">.</span></span>
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#features">Product</a>
+          <a href="#use-cases">Use Cases</a>
+          <a href="#how">How It Works</a>
+          <a href="#integration">Integrations</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <div class="nav__actions">
+          <a href="#" class="nav__login">Login</a>
+          <a href="#cta" class="btn btn--primary btn--sm">
+            Start Free Trial
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+
+        <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="nav__mobile" id="navMobile">
+        <a href="#features">Product</a>
+        <a href="#use-cases">Use Cases</a>
+        <a href="#how">How It Works</a>
+        <a href="#integration">Integrations</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#" class="nav__mobile-login">Login</a>
+        <a href="#cta" class="btn btn--primary">Start Free Trial</a>
+      </div>
+    </header>
+
+    <!-- =========================== HERO =========================== -->
+    <section class="hero">
+      <div class="hero__gradient" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <span class="badge">
+            <span class="badge__icon" aria-hidden="true">✦</span>
+            AI shopping assistant for WooCommerce
+          </span>
+
+          <h1 class="display">
+            Turn your WooCommerce store into a
+            <span class="text-indigo">conversational</span> shopping experience
+          </h1>
+
+          <p class="hero__sub">
+            Give shoppers instant answers, personalized product recommendations, and guided buying
+            help with an AI assistant trained on your WooCommerce products, categories, pages, and
+            store policies.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#cta" class="btn btn--primary">
+              Start Free Trial
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#how" class="btn btn--ghost">
+              See How It Works
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+
+          <p class="hero__trust">
+            <span class="dot-green" aria-hidden="true"></span>
+            No credit card required · Works with WooCommerce · Install in minutes
+          </p>
+        </div>
+
+        <!-- =================== Hero visual: chat mockup =================== -->
+        <div class="hero__visual">
+          <div class="chat" role="img" aria-label="AI shopping assistant chat conversation example">
+            <div class="chat__header">
+              <div class="chat__bot">
+                <span class="chat__bot-avatar" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="18" height="18">
+                    <path fill="#3F4FE5" d="M12 0l2.3 7.6L22 8.2l-6 5 2 8.8L12 17.6 6 22l2-8.8-6-5 7.7-.6Z" />
+                  </svg>
+                </span>
+                <div>
+                  <div class="chat__bot-name">FlowCart Assistant</div>
+                  <div class="chat__bot-status"><span class="status-dot"></span> Online · trained on your catalog</div>
+                </div>
+              </div>
+              <button class="chat__close" aria-label="Close chat">×</button>
+            </div>
+
+            <div class="chat__body">
+              <div class="chat__msg chat__msg--user">
+                I need a waterproof jacket for hiking under €150.
+              </div>
+              <div class="chat__msg chat__msg--bot">
+                I found a few good options. Do you prefer lightweight, insulated, or all-season?
+              </div>
+              <div class="chat__msg chat__msg--user">Lightweight, but still good for rain.</div>
+              <div class="chat__msg chat__msg--bot">
+                Great. Here are 3 jackets matched on waterproof rating, weight, and reviews:
+              </div>
+
+              <div class="chat__products">
+                <div class="chat__product chat__product--featured">
+                  <div class="chat__product-img" style="background:linear-gradient(135deg,#3F4FE5,#A5B4FC)">
+                    <span class="chat__product-tag">Top pick</span>
+                  </div>
+                  <div class="chat__product-body">
+                    <div class="chat__product-name">Alpine Shell Jacket</div>
+                    <div class="chat__product-meta">Lightweight · Waterproof · Breathable</div>
+                    <div class="chat__product-price">€129<span>.00</span></div>
+                  </div>
+                </div>
+                <div class="chat__product">
+                  <div class="chat__product-img" style="background:linear-gradient(135deg,#0EA5E9,#22D3EE)"></div>
+                  <div class="chat__product-body">
+                    <div class="chat__product-name">Trail Rain Jacket</div>
+                    <div class="chat__product-meta">Mid-weight · 2.5L · Packable</div>
+                    <div class="chat__product-price">€139<span>.00</span></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="chat__msg chat__msg--user">Does it come in black?</div>
+              <div class="chat__msg chat__msg--bot">
+                Yes — black is available in S, M, L, XL. Want to view it?
+              </div>
+            </div>
+
+            <div class="chat__input">
+              <input type="text" placeholder="Ask about products, sizes, returns…" aria-label="Chat input" />
+              <button class="chat__send" aria-label="Send">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none">
+                  <path d="M3 11l18-8-8 18-2-8-8-2z" stroke="#0A0A0A" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Floating glass cards -->
+          <div class="float-card float-card--1" aria-hidden="true">
+            <div class="float-card__icon" style="background:#D4FC57">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+                <path d="M12 2v20M2 12h20" stroke="#0A0A0A" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div>
+              <div class="float-card__label">Conversion lift</div>
+              <div class="float-card__value">+27.4%</div>
+            </div>
+          </div>
+          <div class="float-card float-card--2" aria-hidden="true">
+            <div class="float-card__icon" style="background:#E0E7FF">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none">
+                <path d="M20 12a8 8 0 11-16 0 8 8 0 0116 0z" stroke="#3F4FE5" stroke-width="2" />
+                <path d="M9 12l2 2 4-4" stroke="#3F4FE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div>
+              <div class="float-card__label">Questions answered</div>
+              <div class="float-card__value">12,840</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="container">
+        <div class="trust">
+          <div class="trust__label">Trusted by ambitious WooCommerce stores —</div>
+          <div class="trust__logos" aria-hidden="true">
+            <span class="logo-text">Logoipsum</span>
+            <span class="logo-text">★ Vertex</span>
+            <span class="logo-text">Northstar</span>
+            <span class="logo-text">◆ Lumen</span>
+            <span class="logo-text">Atlas Co.</span>
+            <span class="logo-text">Helios</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== PROBLEM SECTION =========================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section__header">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> The problem</span>
+          <h2 class="h2">Online shoppers still struggle to find the right product</h2>
+          <p class="section__intro">
+            Most stores have thousands of products, but customers arrive with vague needs and
+            comparison questions. Search and filters alone can't guide them — they leave with their
+            cart empty.
+          </p>
+        </div>
+
+        <div class="problem-grid">
+          <article class="problem-card">
+            <div class="problem-card__icon problem-card__icon--1">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="#0A0A0A" stroke-width="2" />
+                <path d="M21 21l-4.35-4.35" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Product discovery is difficult</h3>
+            <p>
+              Customers rarely know the exact product name, SKU, or category. They describe needs in
+              natural language — but most stores only support keyword search and static filters.
+            </p>
+          </article>
+
+          <article class="problem-card">
+            <div class="problem-card__icon problem-card__icon--2">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="#0A0A0A" stroke-width="2" />
+              </svg>
+            </div>
+            <h3>Product pages leave questions unanswered</h3>
+            <p>
+              Shoppers want to know if a product fits their use case, size, budget, compatibility,
+              delivery, or return needs. If they can't get answers quickly, they leave.
+            </p>
+          </article>
+
+          <article class="problem-card">
+            <div class="problem-card__icon problem-card__icon--3">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <circle cx="9" cy="7" r="4" stroke="#0A0A0A" stroke-width="2" />
+              </svg>
+            </div>
+            <h3>Support answers the same questions, over and over</h3>
+            <p>
+              Store owners and support teams repeatedly handle questions about shipping, returns,
+              stock, sizes, materials, bundles, and compatibility — every single day.
+            </p>
+          </article>
+
+          <article class="problem-card">
+            <div class="problem-card__icon problem-card__icon--4">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M3 3v18h18M7 14l4-4 4 4 5-5" stroke="#0A0A0A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Valuable buying intent stays invisible</h3>
+            <p>
+              Search bars and page views don't reveal what shoppers really wanted, why they
+              hesitated, or which objections prevented them from buying.
+            </p>
+          </article>
+        </div>
+
+        <p class="section__closing">
+          Your store already has the product data. The missing layer is a
+          <strong>conversational buying experience</strong> that turns it into helpful guidance.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================== SOLUTION SECTION =========================== -->
+    <section class="section section--accent">
+      <div class="container">
+        <div class="section__header">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> The solution</span>
+          <h2 class="h2">Meet your AI shopping assistant for WooCommerce</h2>
+          <p class="section__intro">
+            FlowCart connects to your WooCommerce store, learns from your catalog and store content,
+            then gives customers a fast, natural way to ask questions, compare products, and
+            discover what to buy.
+          </p>
+        </div>
+
+        <div class="solution">
+          <div class="solution__visual">
+            <div class="solution__bg" aria-hidden="true"></div>
+
+            <div class="solution__card solution__card--main">
+              <div class="solution__card-head">
+                <span class="solution__card-tag">
+                  <span class="status-dot"></span> Live conversation
+                </span>
+                <span class="solution__card-time">just now</span>
+              </div>
+              <p class="solution__card-q">"Best espresso machine for a small office, under €600?"</p>
+              <div class="solution__card-recs">
+                <div class="solution__rec">
+                  <div class="solution__rec-img" style="background:linear-gradient(135deg,#3F4FE5,#818CF8)"></div>
+                  <div>
+                    <div class="solution__rec-name">Compact Auto Espresso</div>
+                    <div class="solution__rec-price">€549</div>
+                  </div>
+                  <span class="solution__rec-match">98% match</span>
+                </div>
+                <div class="solution__rec">
+                  <div class="solution__rec-img" style="background:linear-gradient(135deg,#10B981,#34D399)"></div>
+                  <div>
+                    <div class="solution__rec-name">Office Pro Brewer</div>
+                    <div class="solution__rec-price">€489</div>
+                  </div>
+                  <span class="solution__rec-match">91% match</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="solution__card solution__card--mini">
+              <div class="solution__mini-row">
+                <span class="solution__mini-label">Buying intent</span>
+                <span class="solution__mini-badge solution__mini-badge--high">High</span>
+              </div>
+              <div class="solution__mini-bar"><span style="width:78%"></span></div>
+            </div>
+          </div>
+
+          <div class="solution__content">
+            <p class="solution__lead">
+              Instead of forcing shoppers to browse manually, your AI assistant acts like a
+              knowledgeable store expert — understanding intent, recommending matching products,
+              and guiding visitors toward purchase.
+            </p>
+            <ul class="check-list">
+              <li>Turn product data into helpful shopping conversations</li>
+              <li>Reduce friction before checkout</li>
+              <li>Improve product discovery for new and returning customers</li>
+              <li>Answer repetitive customer questions automatically</li>
+              <li>Collect insights from real customer conversations</li>
+            </ul>
+            <a href="#cta" class="btn btn--lime">
+              Launch Your AI Assistant
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== VALUE PROPOSITION =========================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section__header">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> Why it matters</span>
+          <h2 class="h2">
+            More helpful conversations.<br />
+            More confident customers. <span class="text-indigo">More sales.</span>
+          </h2>
+        </div>
+
+        <div class="value-grid">
+          <article class="value-card value-card--lg">
+            <div class="value-card__num">01</div>
+            <h3>Guide shoppers like an expert salesperson</h3>
+            <p>
+              Help visitors explain what they need in their own words. The assistant asks
+              clarifying questions, recommends suitable products, and explains why each option fits.
+            </p>
+            <div class="value-card__viz" aria-hidden="true">
+              <div class="viz-pill">"Help me pick a gift…"</div>
+              <div class="viz-arrow">↓</div>
+              <div class="viz-recs">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="value-card">
+            <div class="value-card__num">02</div>
+            <h3>Convert unsure visitors into confident buyers</h3>
+            <p>
+              Reduce hesitation by answering fit, feature, shipping, return, and availability
+              questions before customers abandon.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-card__num">03</div>
+            <h3>Make your catalog easier to explore</h3>
+            <p>
+              Large catalogs feel overwhelming. Conversational search lets shoppers find products
+              by need, occasion, budget, or problem to solve.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-card__num">04</div>
+            <h3>Reduce repetitive support workload</h3>
+            <p>
+              Let the assistant handle common pre-sale and post-sale questions automatically so
+              your team focuses on complex, high-value requests.
+            </p>
+          </article>
+
+          <article class="value-card">
+            <div class="value-card__num">05</div>
+            <h3>Learn what customers actually want</h3>
+            <p>
+              Track questions, objections, product requests, failed searches, and buying signals to
+              improve merchandising, content, and pages.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== FEATURES (DARK SECTION) =========================== -->
+    <section class="section section--dark" id="features">
+      <div class="section--dark__glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="eyebrow eyebrow--dark"><span class="eyebrow__icon">✦</span> Features</span>
+          <h2 class="h2 h2--light">Everything your store needs to sell through conversation</h2>
+          <p class="section__intro section__intro--light">
+            Ten capabilities built around one promise: help every WooCommerce shopper find the
+            right product faster.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card feature-card--accent-1">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M12 2l2.4 7.6L22 8.2l-6 5 2 8.8L12 17.6 6 22l2-8.8-6-5 7.6-.6L12 2z" stroke="#D4FC57" stroke-width="1.8" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Personalized product recommendations</h3>
+            <p>
+              Recommend products based on needs, preferences, budget, attributes, and stock — all
+              from your WooCommerce catalog.
+            </p>
+            <div class="feature-card__example">
+              "Best gift for a beginner gardener under €50?"
+            </div>
+          </article>
+
+          <article class="feature-card feature-card--accent-2">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <circle cx="11" cy="11" r="7" stroke="#D4FC57" stroke-width="1.8" />
+                <path d="M21 21l-4.35-4.35" stroke="#D4FC57" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Natural-language product search</h3>
+            <p>
+              Shoppers can describe a use case, occasion, material, budget, or compatibility need —
+              and get matching products instantly.
+            </p>
+            <div class="feature-card__example">
+              "I need a drill for small home repairs."
+            </div>
+          </article>
+
+          <article class="feature-card feature-card--accent-3">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M21 11.5a8.38 8.38 0 01-9 8.4A8.5 8.5 0 113 12.5" stroke="#D4FC57" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M12 8v4l3 2" stroke="#D4FC57" stroke-width="1.8" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3>Instant product answers</h3>
+            <p>
+              Use descriptions, attributes, variations, stock, prices, and reviews to answer
+              shopper questions in seconds.
+            </p>
+            <div class="feature-card__example">"Is this compatible with my model?"</div>
+          </article>
+
+          <article class="feature-card feature-card--accent-4">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <rect x="3" y="3" width="7" height="18" rx="1.5" stroke="#D4FC57" stroke-width="1.8" />
+                <rect x="14" y="3" width="7" height="11" rx="1.5" stroke="#D4FC57" stroke-width="1.8" />
+              </svg>
+            </div>
+            <h3>Side-by-side product comparison</h3>
+            <p>
+              Compare price, features, materials, ratings, and suitability — and recommend the
+              best option for each shopper's needs.
+            </p>
+          </article>
+
+          <article class="feature-card feature-card--accent-5">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M3 7l9-4 9 4-9 4-9-4zM3 12l9 4 9-4M3 17l9 4 9-4" stroke="#D4FC57" stroke-width="1.8" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Store policy answers</h3>
+            <p>
+              Train your assistant on shipping, returns, payment, warranty, and FAQ pages — and
+              deflect repetitive support questions.
+            </p>
+          </article>
+
+          <article class="feature-card feature-card--accent-6">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M20 6L9 17l-5-5" stroke="#D4FC57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Automatic WooCommerce sync</h3>
+            <p>
+              Names, descriptions, categories, images, prices, inventory, attributes, and
+              variations stay aligned with your live catalog.
+            </p>
+          </article>
+
+          <article class="feature-card feature-card--accent-1">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M3 3v18h18M7 14l4-4 4 4 5-5" stroke="#D4FC57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Conversation analytics & intent</h3>
+            <p>
+              See what customers ask, which products are recommended, where conversations succeed,
+              and what questions go unanswered.
+            </p>
+          </article>
+
+          <article class="feature-card feature-card--accent-2">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="#D4FC57" stroke-width="1.8" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Customizable chat widget</h3>
+            <p>
+              Customize appearance, welcome message, tone, placement, colors, and CTA behavior so
+              the assistant feels native to your brand.
+            </p>
+          </article>
+
+          <article class="feature-card feature-card--accent-3">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <path d="M20 7l-8 10-6-6" stroke="#D4FC57" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Lead capture & buying signals</h3>
+            <p>
+              When a shopper shows intent, capture contact info, suggest next actions, or send
+              them to the right product page.
+            </p>
+          </article>
+
+          <article class="feature-card feature-card--accent-4">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                <circle cx="12" cy="12" r="3" stroke="#D4FC57" stroke-width="1.8" />
+                <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 008 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.6 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.6a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09A1.65 1.65 0 0015 4.6a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09A1.65 1.65 0 0019.4 15z" stroke="#D4FC57" stroke-width="1.8" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3>Admin controls</h3>
+            <p>
+              Configure data sources, enable answer types, review unanswered questions, and manage
+              assistant behavior from one dashboard.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== HOW IT WORKS =========================== -->
+    <section class="section section--light" id="how">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> How it works</span>
+          <h2 class="h2">Launch your AI shopping assistant in four simple steps</h2>
+        </div>
+
+        <div class="steps">
+          <div class="steps__rail" aria-hidden="true"></div>
+
+          <article class="step">
+            <div class="step__num">1</div>
+            <h3>Connect WooCommerce</h3>
+            <p>
+              Install the plugin and securely connect your WooCommerce store. Your product catalog
+              and selected pages sync automatically.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step__num">2</div>
+            <h3>Train on your products</h3>
+            <p>
+              The assistant learns from titles, descriptions, categories, attributes, variations,
+              prices, stock, and store pages.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step__num">3</div>
+            <h3>Customize the experience</h3>
+            <p>
+              Set brand tone, welcome message, widget style, recommended prompts, and fallback
+              behavior.
+            </p>
+          </article>
+
+          <article class="step">
+            <div class="step__num">4</div>
+            <h3>Go live & improve</h3>
+            <p>
+              Add the widget to your storefront, monitor conversations, review analytics, and keep
+              improving answers over time.
+            </p>
+          </article>
+        </div>
+
+        <div class="section__cta">
+          <a href="#cta" class="btn btn--primary">
+            Get Started in Minutes
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== USE CASES =========================== -->
+    <section class="section section--soft" id="use-cases">
+      <div class="container">
+        <div class="section__header">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> Use cases</span>
+          <h2 class="h2">Built for the moments where shoppers need help</h2>
+        </div>
+
+        <div class="usecase-grid">
+          <article class="usecase">
+            <span class="usecase__tag">Guided discovery</span>
+            <h3>Help customers find products by need, not keywords</h3>
+            <p>
+              Customers may only know the problem they want to solve. FlowCart turns vague needs
+              into relevant product recommendations.
+            </p>
+            <blockquote class="usecase__quote">
+              "I need something for a small balcony garden that doesn't need much maintenance."
+            </blockquote>
+          </article>
+
+          <article class="usecase">
+            <span class="usecase__tag">Product comparison</span>
+            <h3>Make product decisions easier</h3>
+            <p>
+              When customers are stuck between options, the assistant compares features and
+              recommends the best fit for their priorities.
+            </p>
+            <blockquote class="usecase__quote">
+              "What's the difference between these two coffee machines for a small office?"
+            </blockquote>
+          </article>
+
+          <article class="usecase">
+            <span class="usecase__tag">Fit & compatibility</span>
+            <h3>Reduce uncertainty before checkout</h3>
+            <p>
+              For apparel, parts, accessories, or electronics, customers often need help choosing
+              the right size, fit, or compatible item.
+            </p>
+            <blockquote class="usecase__quote">"Will this accessory fit my model?"</blockquote>
+          </article>
+
+          <article class="usecase">
+            <span class="usecase__tag">Gift recommendations</span>
+            <h3>Turn gift shoppers into buyers</h3>
+            <p>
+              Recommend by recipient, occasion, budget, interest, and delivery deadline — without
+              friction.
+            </p>
+            <blockquote class="usecase__quote">
+              "Birthday gift for someone who loves cooking, under €80?"
+            </blockquote>
+          </article>
+
+          <article class="usecase">
+            <span class="usecase__tag">Pre-sale support</span>
+            <h3>Answer buying questions instantly</h3>
+            <p>
+              Features, materials, delivery, warranty, returns, availability, and alternatives —
+              answered before customers leave.
+            </p>
+            <blockquote class="usecase__quote">
+              "How long does delivery take, and can I return it if it doesn't fit?"
+            </blockquote>
+          </article>
+
+          <article class="usecase">
+            <span class="usecase__tag">Long-tail catalog</span>
+            <h3>Make large catalogs easier to shop</h3>
+            <p>
+              For stores with many SKUs and variations, the assistant helps customers discover
+              products they may otherwise miss.
+            </p>
+            <blockquote class="usecase__quote">
+              "Show me products for beginners, in black, under €100."
+            </blockquote>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== INDUSTRIES =========================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> Industries</span>
+          <h2 class="h2">Useful for almost any WooCommerce store with products customers ask about</h2>
+        </div>
+
+        <div class="industries">
+          <div class="industry">
+            <span class="industry__emoji" aria-hidden="true">👗</span>
+            <h4>Fashion & Apparel</h4>
+            <p>Sizes, styles, colors, outfits, materials, care, alternatives.</p>
+          </div>
+          <div class="industry">
+            <span class="industry__emoji" aria-hidden="true">✨</span>
+            <h4>Beauty & Skincare</h4>
+            <p>Skin type, routine, concerns, ingredients, compatibility.</p>
+          </div>
+          <div class="industry">
+            <span class="industry__emoji" aria-hidden="true">🛋</span>
+            <h4>Home & Furniture</h4>
+            <p>Room, dimensions, style, material, delivery, budget.</p>
+          </div>
+          <div class="industry">
+            <span class="industry__emoji" aria-hidden="true">📱</span>
+            <h4>Electronics</h4>
+            <p>Compatibility, specs, upgrades, the right accessory.</p>
+          </div>
+          <div class="industry">
+            <span class="industry__emoji" aria-hidden="true">🔧</span>
+            <h4>Tools & DIY</h4>
+            <p>Project type, skill level, material, technical requirements.</p>
+          </div>
+          <div class="industry">
+            <span class="industry__emoji" aria-hidden="true">🏔</span>
+            <h4>Sports & Outdoor</h4>
+            <p>Activity, weather, fit, durability, experience level.</p>
+          </div>
+          <div class="industry">
+            <span class="industry__emoji" aria-hidden="true">🐾</span>
+            <h4>Pet Supplies</h4>
+            <p>Pet type, breed, age, size, dietary needs, use case.</p>
+          </div>
+          <div class="industry">
+            <span class="industry__emoji" aria-hidden="true">🎁</span>
+            <h4>Gifts & Specialty</h4>
+            <p>Occasion, recipient, interest, price range, deadline.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== WOOCOMMERCE INTEGRATION =========================== -->
+    <section class="section section--integration" id="integration">
+      <div class="container">
+        <div class="integration">
+          <div class="integration__copy">
+            <span class="eyebrow"><span class="eyebrow__icon">✦</span> WooCommerce integration</span>
+            <h2 class="h2">Designed for WooCommerce from day one</h2>
+            <p class="section__intro section__intro--left">
+              Connect your store and give your assistant access to the product data it needs to
+              help customers shop — accurately and in real time.
+            </p>
+            <ul class="check-list check-list--two-col">
+              <li>Product titles & descriptions</li>
+              <li>Product images & URLs</li>
+              <li>Categories & tags</li>
+              <li>Prices & sale prices</li>
+              <li>Stock status</li>
+              <li>Attributes & variations</li>
+              <li>Product metadata</li>
+              <li>Store pages & policies</li>
+              <li>Customer-facing FAQs</li>
+            </ul>
+            <a href="#cta" class="btn btn--primary">
+              Connect Your Store
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="integration__visual">
+            <div class="woo-card">
+              <div class="woo-card__head">
+                <div class="woo-logo">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none">
+                    <path d="M3 7c0-2 1-3 3-3h12c2 0 3 1 3 3v7c0 2-1 3-3 3h-5l-3 4-1-4H6c-2 0-3-1-3-3V7z" fill="#7F54B3" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="woo-card__title">WooCommerce</div>
+                  <div class="woo-card__sub">Connected · syncing in real time</div>
+                </div>
+                <span class="woo-status"><span class="status-dot"></span> Live</span>
+              </div>
+              <div class="woo-card__rows">
+                <div class="woo-row">
+                  <span>Products synced</span>
+                  <strong>4,820</strong>
+                </div>
+                <div class="woo-row">
+                  <span>Categories</span>
+                  <strong>147</strong>
+                </div>
+                <div class="woo-row">
+                  <span>Pages indexed</span>
+                  <strong>23</strong>
+                </div>
+                <div class="woo-row">
+                  <span>Last sync</span>
+                  <strong>2 min ago</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="woo-flow" aria-hidden="true">
+              <div class="woo-flow__dot woo-flow__dot--1"></div>
+              <div class="woo-flow__dot woo-flow__dot--2"></div>
+              <div class="woo-flow__dot woo-flow__dot--3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== ANALYTICS =========================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> Analytics</span>
+          <h2 class="h2">Learn from every customer conversation</h2>
+          <p class="section__intro">
+            Your AI assistant does more than answer questions. It reveals what shoppers want, what
+            they can't find, and what information they need before buying.
+          </p>
+        </div>
+
+        <div class="dashboard">
+          <div class="dashboard__sidebar">
+            <div class="brand brand--mini">
+              <span class="brand__mark"><svg viewBox="0 0 24 24" width="16" height="16"><path fill="#3F4FE5" d="M12 0l2.3 7.6L22 8.2l-6 5 2 8.8L12 17.6 6 22l2-8.8-6-5 7.7-.6Z" /></svg></span>
+              <span class="brand__name">FlowCart<span class="brand__dot">.</span></span>
+            </div>
+            <div class="dashboard__nav">
+              <div class="dashboard__nav-item dashboard__nav-item--active">Overview</div>
+              <div class="dashboard__nav-item">Conversations</div>
+              <div class="dashboard__nav-item">Recommendations</div>
+              <div class="dashboard__nav-item">Unanswered</div>
+              <div class="dashboard__nav-item">Demand signals</div>
+              <div class="dashboard__nav-item">Settings</div>
+            </div>
+          </div>
+
+          <div class="dashboard__main">
+            <div class="dashboard__kpis">
+              <div class="kpi">
+                <div class="kpi__label">Conversations · 30d</div>
+                <div class="kpi__value">12,840</div>
+                <div class="kpi__delta kpi__delta--up">+34.2%</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__label">High-intent sessions</div>
+                <div class="kpi__value">2,164</div>
+                <div class="kpi__delta kpi__delta--up">+18.6%</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__label">Avg. answer time</div>
+                <div class="kpi__value">1.4<span>s</span></div>
+                <div class="kpi__delta">stable</div>
+              </div>
+              <div class="kpi">
+                <div class="kpi__label">Conversion lift</div>
+                <div class="kpi__value">+27<span>%</span></div>
+                <div class="kpi__delta kpi__delta--up">vs. baseline</div>
+              </div>
+            </div>
+
+            <div class="dashboard__row">
+              <div class="dashboard__chart">
+                <div class="dashboard__chart-head">
+                  <div>
+                    <div class="dashboard__chart-title">Conversation volume</div>
+                    <div class="dashboard__chart-sub">Last 30 days</div>
+                  </div>
+                  <span class="chip">+34.2%</span>
+                </div>
+                <svg viewBox="0 0 400 140" class="chart" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                      <stop offset="0%" stop-color="#3F4FE5" stop-opacity="0.25" />
+                      <stop offset="100%" stop-color="#3F4FE5" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,110 C40,100 60,80 100,75 C140,70 160,90 200,70 C240,52 260,40 300,35 C340,30 360,28 400,18 L400,140 L0,140 Z" fill="url(#g1)" />
+                  <path d="M0,110 C40,100 60,80 100,75 C140,70 160,90 200,70 C240,52 260,40 300,35 C340,30 360,28 400,18" fill="none" stroke="#3F4FE5" stroke-width="2.5" />
+                </svg>
+              </div>
+
+              <div class="dashboard__list">
+                <div class="dashboard__list-head">
+                  <div class="dashboard__chart-title">Top customer questions</div>
+                </div>
+                <ul>
+                  <li><span>Does this come in size M?</span><strong>1,204</strong></li>
+                  <li><span>How long is delivery?</span><strong>982</strong></li>
+                  <li><span>Compare X vs. Y</span><strong>764</strong></li>
+                  <li><span>What's the return window?</span><strong>610</strong></li>
+                  <li><span>Best gift under €50?</span><strong>538</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="dashboard__row dashboard__row--2">
+              <div class="dashboard__signal">
+                <div class="dashboard__chart-title">Demand signals</div>
+                <div class="signal">
+                  <span class="signal__name">Lightweight rain jackets</span>
+                  <div class="signal__bar"><span style="width:84%"></span></div>
+                  <span class="signal__pct">84%</span>
+                </div>
+                <div class="signal">
+                  <span class="signal__name">Compact espresso · office</span>
+                  <div class="signal__bar"><span style="width:71%"></span></div>
+                  <span class="signal__pct">71%</span>
+                </div>
+                <div class="signal">
+                  <span class="signal__name">Gifts under €80</span>
+                  <div class="signal__bar"><span style="width:62%"></span></div>
+                  <span class="signal__pct">62%</span>
+                </div>
+                <div class="signal">
+                  <span class="signal__name">Beginner DIY tools</span>
+                  <div class="signal__bar"><span style="width:48%"></span></div>
+                  <span class="signal__pct">48%</span>
+                </div>
+              </div>
+
+              <div class="dashboard__unanswered">
+                <div class="dashboard__chart-title">Unanswered questions</div>
+                <ul>
+                  <li>
+                    <span>"Do you offer same-day delivery in Berlin?"</span>
+                    <span class="chip chip--warn">Needs content</span>
+                  </li>
+                  <li>
+                    <span>"Is the X model dishwasher-safe?"</span>
+                    <span class="chip chip--warn">Missing attribute</span>
+                  </li>
+                  <li>
+                    <span>"Are returns free for sale items?"</span>
+                    <span class="chip chip--ok">Resolved</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section__cta">
+          <a href="#cta" class="btn btn--lime">
+            Turn Conversations Into Growth Insights
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== COMPARISON =========================== -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> Not just another chatbot</span>
+          <h2 class="h2">
+            Traditional chatbots answer tickets.<br />
+            <span class="text-indigo">FlowCart helps customers buy.</span>
+          </h2>
+        </div>
+
+        <div class="compare">
+          <div class="compare__row compare__row--head">
+            <div>Capability</div>
+            <div class="compare__col-basic">Basic chatbot</div>
+            <div class="compare__col-pro">FlowCart</div>
+          </div>
+          <div class="compare__row"><div>Answers static FAQs</div><div class="compare__col-basic"><span class="check">✓</span></div><div class="compare__col-pro"><span class="check check--pro">✓</span></div></div>
+          <div class="compare__row"><div>Understands product catalog</div><div class="compare__col-basic"><span class="limited">Limited</span></div><div class="compare__col-pro"><span class="check check--pro">✓</span></div></div>
+          <div class="compare__row"><div>Recommends products by need</div><div class="compare__col-basic"><span class="cross">✕</span></div><div class="compare__col-pro"><span class="check check--pro">✓</span></div></div>
+          <div class="compare__row"><div>Compares products side-by-side</div><div class="compare__col-basic"><span class="cross">✕</span></div><div class="compare__col-pro"><span class="check check--pro">✓</span></div></div>
+          <div class="compare__row"><div>Uses live WooCommerce data</div><div class="compare__col-basic"><span class="limited">Limited</span></div><div class="compare__col-pro"><span class="check check--pro">✓</span></div></div>
+          <div class="compare__row"><div>Handles product discovery</div><div class="compare__col-basic"><span class="cross">✕</span></div><div class="compare__col-pro"><span class="check check--pro">✓</span></div></div>
+          <div class="compare__row"><div>Captures buying intent</div><div class="compare__col-basic"><span class="limited">Limited</span></div><div class="compare__col-pro"><span class="check check--pro">✓</span></div></div>
+          <div class="compare__row"><div>Improves merchandising insights</div><div class="compare__col-basic"><span class="cross">✕</span></div><div class="compare__col-pro"><span class="check check--pro">✓</span></div></div>
+          <div class="compare__row"><div>Built for sales conversations</div><div class="compare__col-basic"><span class="cross">✕</span></div><div class="compare__col-pro"><span class="check check--pro">✓</span></div></div>
+        </div>
+
+        <p class="section__closing">
+          A support chatbot reacts to questions. <strong>FlowCart shapes the buying journey</strong>
+          from discovery to decision.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================== SOCIAL PROOF =========================== -->
+    <section class="section section--light">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> Why stores choose us</span>
+          <h2 class="h2">Practical AI for ecommerce teams — not another generic chatbot</h2>
+        </div>
+
+        <div class="metrics">
+          <div class="metric"><div class="metric__value">24/7</div><div class="metric__label">Product guidance</div></div>
+          <div class="metric"><div class="metric__value">5 min</div><div class="metric__label">Average install time</div></div>
+          <div class="metric"><div class="metric__value">10k+</div><div class="metric__label">Products searchable by conversation</div></div>
+          <div class="metric"><div class="metric__value">+27%</div><div class="metric__label">Conversion lift on average</div></div>
+        </div>
+
+        <div class="testimonials">
+          <article class="testimonial">
+            <div class="testimonial__quote">
+              "Customers are finding products faster, and we finally understand what they're asking
+              for before they buy."
+            </div>
+            <div class="testimonial__author">
+              <span class="testimonial__avatar" style="background:linear-gradient(135deg,#3F4FE5,#A5B4FC)">AL</span>
+              <div>
+                <div class="testimonial__name">Anya L.</div>
+                <div class="testimonial__role">Founder · WooCommerce Store</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial">
+            <div class="testimonial__quote">
+              "FlowCart answers product questions that used to take our team hours every week. The
+              analytics also tell us exactly where our product pages fall short."
+            </div>
+            <div class="testimonial__author">
+              <span class="testimonial__avatar" style="background:linear-gradient(135deg,#D4FC57,#86EFAC)">MP</span>
+              <div>
+                <div class="testimonial__name">Marco P.</div>
+                <div class="testimonial__role">Ecommerce Manager</div>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial">
+            <div class="testimonial__quote">
+              "It feels less like support chat and more like a guided shopping experience. The
+              recommendations are spot on, and setup took an afternoon."
+            </div>
+            <div class="testimonial__author">
+              <span class="testimonial__avatar" style="background:linear-gradient(135deg,#F472B6,#FB7185)">SR</span>
+              <div>
+                <div class="testimonial__name">Samantha R.</div>
+                <div class="testimonial__role">Agency Partner</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== PRICING =========================== -->
+    <section class="section section--soft" id="pricing">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> Pricing</span>
+          <h2 class="h2">Start small, scale as your store grows</h2>
+          <p class="section__intro">
+            Choose a plan based on catalog size, conversation volume, and growth needs. Start with
+            the essentials and upgrade when you need more.
+          </p>
+        </div>
+
+        <div class="pricing">
+          <article class="plan">
+            <div class="plan__head">
+              <h3>Starter</h3>
+              <p>Small WooCommerce stores starting with AI shopping assistance.</p>
+            </div>
+            <div class="plan__price"><span class="plan__currency">€</span>29<span class="plan__period">/mo</span></div>
+            <ul class="plan__features">
+              <li>AI chat widget</li>
+              <li>WooCommerce product sync</li>
+              <li>Product Q&amp;A</li>
+              <li>Basic product recommendations</li>
+              <li>Store policy answers</li>
+              <li>Basic analytics</li>
+            </ul>
+            <a href="#cta" class="btn btn--ghost btn--full">Start Free Trial</a>
+          </article>
+
+          <article class="plan plan--featured">
+            <div class="plan__badge">Most popular</div>
+            <div class="plan__head">
+              <h3>Growth</h3>
+              <p>Growing stores that want stronger recommendations and deeper insights.</p>
+            </div>
+            <div class="plan__price"><span class="plan__currency">€</span>89<span class="plan__period">/mo</span></div>
+            <ul class="plan__features">
+              <li>Everything in Starter</li>
+              <li>Larger catalog support</li>
+              <li>Advanced recommendation behavior</li>
+              <li>Conversation analytics</li>
+              <li>Unanswered question reports</li>
+              <li>Custom assistant instructions</li>
+              <li>Priority sync options</li>
+            </ul>
+            <a href="#cta" class="btn btn--primary btn--full">Choose Growth</a>
+          </article>
+
+          <article class="plan">
+            <div class="plan__head">
+              <h3>Pro</h3>
+              <p>High-volume stores, agencies, and teams managing advanced ecommerce.</p>
+            </div>
+            <div class="plan__price">Custom</div>
+            <ul class="plan__features">
+              <li>Everything in Growth</li>
+              <li>Higher conversation limits</li>
+              <li>Advanced analytics</li>
+              <li>Multi-store / agency controls</li>
+              <li>Enhanced customization</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="#cta" class="btn btn--ghost btn--full">Contact Sales</a>
+          </article>
+        </div>
+
+        <p class="pricing__note">
+          Final plan names, limits, and pricing may be adjusted based on your product strategy.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================== FAQ =========================== -->
+    <section class="section section--light" id="faq">
+      <div class="container container--narrow">
+        <div class="section__header section__header--center">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> FAQ</span>
+          <h2 class="h2">Questions before you get started?</h2>
+        </div>
+
+        <div class="faq">
+          <details class="faq__item" open>
+            <summary>Does this work with WooCommerce?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              Yes. FlowCart is designed for WooCommerce stores and connects to your catalog so the
+              assistant can use product data when helping shoppers.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>How long does setup take?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              Most stores can connect their WooCommerce catalog and configure the basic assistant
+              quickly. Exact time depends on catalog size, content quality, and customization.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Can the assistant recommend specific products?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              Yes. It recommends products based on customer needs, product details, categories,
+              attributes, price, availability, and other catalog data.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Can it answer questions about shipping and returns?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              Yes — if you connect the relevant store policy content. FlowCart can use shipping,
+              return, payment, warranty, and FAQ pages to answer common customer questions.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Will it replace my support team?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              No. It handles common shopping and product questions, reduces repetitive workload,
+              and helps customers faster. Complex requests can still be routed to your team.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>What happens if the assistant doesn't know an answer?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              You can configure fallback behavior. The assistant can say it doesn't have enough
+              information, suggest related products, link to a relevant page, or recommend contacting
+              support.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Can I customize the assistant's tone and behavior?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              Yes. Define brand instructions, welcome messages, tone, response style, and
+              customer-facing behavior from your dashboard.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Does it support product variations?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              Yes. The assistant can use variation data such as sizes, colors, attributes, stock
+              status, and pricing when synced from WooCommerce.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Can I see what customers are asking?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              Yes. The analytics dashboard helps you review customer questions, product demand
+              signals, unanswered queries, and conversation trends.
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary>Is this only for large stores?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__body">
+              No. Small stores can use it for better product guidance, while larger stores use it to
+              make complex catalogs easier to navigate.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== FINAL CTA =========================== -->
+    <section class="section section--cta" id="cta">
+      <div class="cta__gradient" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta">
+          <span class="eyebrow"><span class="eyebrow__icon">✦</span> Ready to upgrade your shopping experience?</span>
+          <h2 class="display display--cta">
+            Give every shopper a smarter way to find the right product
+          </h2>
+          <p class="cta__lead">
+            Add an AI shopping assistant to your WooCommerce store and help customers get instant
+            answers, better recommendations, and more confidence before they buy.
+          </p>
+          <div class="cta__actions">
+            <a href="#" class="btn btn--primary btn--lg">
+              Start Free Trial
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#" class="btn btn--ghost btn--lg">Book a Demo</a>
+          </div>
+          <p class="cta__trust">
+            No credit card required · WooCommerce-ready · Built for real ecommerce conversations
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== FOOTER =========================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="newsletter">
+          <h3>Stay close to what's next — connect with us and be part of the community</h3>
+          <form class="newsletter__form" onsubmit="event.preventDefault(); this.querySelector('.newsletter__status').textContent='Thanks — you\'re on the list.';">
+            <input type="email" placeholder="Enter your email" aria-label="Email" required />
+            <button type="submit" class="btn btn--lime">Send Now</button>
+            <div class="newsletter__status" role="status"></div>
+          </form>
+        </div>
+
+        <div class="footer__main">
+          <div class="footer__brand">
+            <a href="#" class="brand brand--footer">
+              <span class="brand__mark"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#3F4FE5" d="M12 0l2.3 7.6L22 8.2l-6 5 2 8.8L12 17.6 6 22l2-8.8-6-5 7.7-.6Z" /></svg></span>
+              <span class="brand__name">FlowCart<span class="brand__dot">.</span></span>
+            </a>
+            <p class="footer__tagline">
+              FlowCart helps WooCommerce stores turn product catalogs into AI-powered shopping
+              conversations.
+            </p>
+            <div class="footer__social">
+              <a href="#" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 4a2 2 0 110 4 2 2 0 010-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 6.77 5.07 5.07 0 0019.91 3S18.73 2.65 16 4.55a13.38 13.38 0 00-7 0C6.27 2.65 5.09 3 5.09 3A5.07 5.07 0 005 6.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 20.13V24" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#" aria-label="Email">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.6"/><path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="1.6"/></svg>
+              </a>
+            </div>
+            <a href="mailto:hello@flowcart.com" class="footer__email">hello@flowcart.com</a>
+          </div>
+
+          <div class="footer__cols">
+            <div class="footer__col">
+              <h5>Product</h5>
+              <a href="#features">Features</a>
+              <a href="#integration">WooCommerce Integration</a>
+              <a href="#">Analytics</a>
+              <a href="#">Demo</a>
+              <a href="#pricing">Pricing</a>
+            </div>
+            <div class="footer__col">
+              <h5>Use Cases</h5>
+              <a href="#">Product Recommendations</a>
+              <a href="#">Product Q&amp;A</a>
+              <a href="#">Product Comparison</a>
+              <a href="#">Gift Finder</a>
+              <a href="#">Catalog Search</a>
+            </div>
+            <div class="footer__col">
+              <h5>Company</h5>
+              <a href="#">About</a>
+              <a href="#">Blog</a>
+              <a href="#">Contact</a>
+              <a href="#">Partners</a>
+            </div>
+            <div class="footer__col">
+              <h5>Resources</h5>
+              <a href="#">Documentation</a>
+              <a href="#">Help Center</a>
+              <a href="#">WooCommerce Setup</a>
+              <a href="#">API Status</a>
+            </div>
+            <div class="footer__col">
+              <h5>Legal</h5>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Data Processing</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© 2026 FlowCart. All rights reserved.</span>
+          <div class="footer__bottom-links">
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
