@@ -2,7 +2,7 @@ export const features = [
   {
     accent: "feature-card--accent-1",
     title: "Personalized product recommendations",
-    text: "Recommend products based on needs, preferences, budget, attributes, and stock — all from your WooCommerce catalog.",
+    text: "Recommend products based on needs, preferences, budget, attributes, and stock — all from your live store catalog.",
     example: '"Best gift for a beginner gardener under €50?"',
   },
   {
@@ -29,7 +29,7 @@ export const features = [
   },
   {
     accent: "feature-card--accent-6",
-    title: "Automatic WooCommerce sync",
+    title: "Automatic catalog sync",
     text: "Names, descriptions, categories, images, prices, inventory, attributes, and variations stay aligned with your live catalog.",
   },
   {

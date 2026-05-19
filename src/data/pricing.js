@@ -1,11 +1,11 @@
 export const plans = [
   {
     name: "Starter",
-    description: "Small WooCommerce stores starting with AI shopping assistance.",
+    description: "Small eCommerce stores starting with AI shopping assistance.",
     price: "29",
     features: [
       "AI chat widget",
-      "WooCommerce product sync",
+      "Product catalog sync",
       "Product Q&A",
       "Basic product recommendations",
       "Store policy answers",

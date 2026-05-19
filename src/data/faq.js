@@ -1,12 +1,12 @@
 export const faqItems = [
   {
-    q: "Does this work with WooCommerce?",
-    a: "Yes. FlowCart is designed for WooCommerce stores and connects to your catalog so the assistant can use product data when helping shoppers.",
+    q: "What eCommerce platforms does this work with?",
+    a: "FlowCart works with any eCommerce store. Connect your product catalog and the assistant uses your live data to help shoppers — regardless of which platform you're on.",
     open: true,
   },
   {
     q: "How long does setup take?",
-    a: "Most stores can connect their WooCommerce catalog and configure the basic assistant quickly. Exact time depends on catalog size, content quality, and customization.",
+    a: "Most stores can connect their catalog and configure the basic assistant quickly. Exact time depends on catalog size, content quality, and customization.",
   },
   {
     q: "Can the assistant recommend specific products?",
@@ -30,7 +30,7 @@ export const faqItems = [
   },
   {
     q: "Does it support product variations?",
-    a: "Yes. The assistant can use variation data such as sizes, colors, attributes, stock status, and pricing when synced from WooCommerce.",
+    a: "Yes. The assistant can use variation data such as sizes, colors, attributes, stock status, and pricing when synced from your store.",
   },
   {
     q: "Can I see what customers are asking?",
